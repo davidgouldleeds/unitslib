@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "fade7f7f-e1de-45ee-b3dc-006828be90ee": {
+      "ProjectGuid": "fade7f7f-e1de-45ee-b3dc-006828be90ee",
+      "DisplayName": "UnitsLib",
+      "ColorIndex": 0
+    },
+    "dce22709-72fe-4493-a7a2-0ba42efa8353": {
+      "ProjectGuid": "dce22709-72fe-4493-a7a2-0ba42efa8353",
+      "DisplayName": "UnitsLib.Tests",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

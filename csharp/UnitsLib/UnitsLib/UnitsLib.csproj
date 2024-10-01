@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Metric\Frequency\" />
+    <Folder Include="Metric\Energy\" />
+    <Folder Include="Metric\Charge\" />
+    <Folder Include="Metric\Mass\" />
+    <Folder Include="Metric\Current\" />
+    <Folder Include="Metric\Amount\" />
+    <Folder Include="Metric\LuminousIntensity\" />
+    <Folder Include="Metric\Temperature\" />
+    <Folder Include="Metric\Power\" />
+  </ItemGroup>
+
+</Project>
