@@ -1,5 +1,0 @@
-U:\home\david\src\unitslib\csharp\UnitsLib\UnitsLib.Tests\obj\Debug\netstandard2.1\UnitsLib.Tests.csproj.AssemblyReference.cache
-U:\home\david\src\unitslib\csharp\UnitsLib\UnitsLib.Tests\obj\Debug\netstandard2.1\UnitsLib.Tests.GeneratedMSBuildEditorConfig.editorconfig
-U:\home\david\src\unitslib\csharp\UnitsLib\UnitsLib.Tests\obj\Debug\netstandard2.1\UnitsLib.Tests.AssemblyInfoInputs.cache
-U:\home\david\src\unitslib\csharp\UnitsLib\UnitsLib.Tests\obj\Debug\netstandard2.1\UnitsLib.Tests.AssemblyInfo.cs
-U:\home\david\src\unitslib\csharp\UnitsLib\UnitsLib.Tests\obj\Debug\netstandard2.1\UnitsLib.Tests.csproj.CoreCompileInputs.cache
