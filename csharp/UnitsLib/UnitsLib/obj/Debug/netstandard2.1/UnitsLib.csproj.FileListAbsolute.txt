@@ -7,3 +7,4 @@ U:\home\david\src\unitslib\csharp\UnitsLib\UnitsLib\obj\Debug\netstandard2.1\Uni
 U:\home\david\src\unitslib\csharp\UnitsLib\UnitsLib\obj\Debug\netstandard2.1\UnitsLib.csproj.CoreCompileInputs.cache
 U:\home\david\src\unitslib\csharp\UnitsLib\UnitsLib\obj\Debug\netstandard2.1\UnitsLib.dll
 U:\home\david\src\unitslib\csharp\UnitsLib\UnitsLib\obj\Debug\netstandard2.1\UnitsLib.pdb
+U:\home\david\src\unitslib\csharp\UnitsLib\UnitsLib\obj\Debug\netstandard2.1\UnitsLib.sourcelink.json
