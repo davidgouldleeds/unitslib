@@ -84,5 +84,15 @@ namespace UnitsLib.Metric.Length
         {
             return new Metre(decimetres / 10M);
         }
+
+        /// <summary>
+        /// Return a Metric Length (metre) given a length in kilometres
+        /// </summary>
+        /// <param name="kilometres">Length in kilometres</param>
+        /// <returns>A Metre object with the given value</returns>
+        public static Metre FromKilometres(decimal kilometres)
+        {
+            return new Metre(kilometres * 1000M);
+        }
     }
 }
