@@ -12,7 +12,7 @@
 
         public override string ToString()
         {
-            return string.Format("{0}{1}", Value, DefaultSymbol);
+            return string.Format("{0:N}{1}", Value, DefaultSymbol);
         }
     }
 }

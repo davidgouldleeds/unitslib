@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace UnitsLib.Metric.Length
 {
@@ -13,16 +11,45 @@ namespace UnitsLib.Metric.Length
         public const string CentimetreSymbol = "cm";
         public const string DecimetreSymbol = "dm";
         public const string MetreSymbol = "m";
+        public const string KilometreSymbol = "km";
+
+        public static decimal PicometreMultiplier => 0.000_000_000_001M;
+        public static decimal NanometreMultiplier => 0.000_000_001M;
+        public static decimal MicronMultiplier => 0.000_001M;
+        public static decimal MillimetreMultiplier => 0.001M;
+        public static decimal CentimetreMultiplier => 0.01M;
+        public static decimal DecimetreMultiplier => 0.1M;
+        public static decimal MetreMultiplier => 1M;
+        public static decimal KilometreMultiplier => 1_000M;
 
         public override string Name => "metre";
 
         public override string Description => "SI Unit of Length";
 
-        public override string DefaultSymbol => "m";
+        public override string DefaultSymbol => MetreSymbol;
 
         public Metre(decimal value)
         {
             Value = value;
+        }
+
+        public string FormatValue(string unit, int decimalPlaces = 3)
+        {
+            return string.Format("{0:N" + decimalPlaces.ToString() + "}{1}",
+                Value * unit switch
+                {
+                    PicometreSymbol => PicometreMultiplier,
+                    NanometreSymbol => NanometreMultiplier,
+                    MicronSymbol => MicronMultiplier,
+                    MillimetreSymbol => MillimetreMultiplier,
+                    CentimetreSymbol => CentimetreMultiplier,
+                    DecimetreSymbol => DecimetreMultiplier,
+                    MetreSymbol => MetreMultiplier,
+                    KilometreSymbol => KilometreMultiplier,
+                    _ => throw new InvalidOperationException("Invalid symbol: " + unit)
+                },
+                unit
+            );
         }
 
         /// <summary>
@@ -32,7 +59,7 @@ namespace UnitsLib.Metric.Length
         /// <returns>A Metre object with the given value</returns>
         public static Metre FromPicometres(decimal picometres)
         {
-            return new Metre(picometres / 1_000_000_000_000M);
+            return new Metre(picometres * PicometreMultiplier);
         }
 
         /// <summary>
@@ -42,7 +69,7 @@ namespace UnitsLib.Metric.Length
         /// <returns>A Metre object with the given value</returns>
         public static Metre FromNanometres(decimal nanometres)
         {
-            return new Metre(nanometres / 1_000_000_000M);
+            return new Metre(nanometres * NanometreMultiplier);
         }
 
         /// <summary>
@@ -52,7 +79,7 @@ namespace UnitsLib.Metric.Length
         /// <returns>A Metre object with the given value</returns>
         public static Metre FromMicrons(decimal microns)
         {
-            return new Metre(microns / 1_000_000M);
+            return new Metre(microns * MicronMultiplier);
         }
 
         /// <summary>
@@ -62,7 +89,7 @@ namespace UnitsLib.Metric.Length
         /// <returns>A Metre object with the given value</returns>
         public static Metre FromMillimetres(decimal millimetres)
         {
-            return new Metre(millimetres / 1_000M);
+            return new Metre(millimetres * MillimetreMultiplier);
         }
 
         /// <summary>
@@ -72,7 +99,7 @@ namespace UnitsLib.Metric.Length
         /// <returns>A Metre object with the given value</returns>
         public static Metre FromCentimetres(decimal centimetres)
         {
-            return new Metre(centimetres / 100M);
+            return new Metre(centimetres * CentimetreMultiplier);
         }
 
         /// <summary>
@@ -82,7 +109,7 @@ namespace UnitsLib.Metric.Length
         /// <returns>A Metre object with the given value</returns>
         public static Metre FromDecimetres(decimal decimetres)
         {
-            return new Metre(decimetres / 10M);
+            return new Metre(decimetres * DecimetreMultiplier);
         }
 
         /// <summary>
@@ -92,7 +119,7 @@ namespace UnitsLib.Metric.Length
         /// <returns>A Metre object with the given value</returns>
         public static Metre FromKilometres(decimal kilometres)
         {
-            return new Metre(kilometres * 1000M);
+            return new Metre(kilometres * KilometreMultiplier);
         }
     }
 }
