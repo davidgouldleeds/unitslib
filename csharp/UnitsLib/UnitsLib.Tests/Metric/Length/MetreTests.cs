@@ -1,5 +1,4 @@
-﻿using NUnit.Framework;
-using UnitsLib.Metric.Length;
+﻿using UnitsLib.Metric.Length;
 
 namespace UnitsLib.Tests.Metric.Length
 {
