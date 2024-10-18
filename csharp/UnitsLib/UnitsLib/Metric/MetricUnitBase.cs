@@ -6,13 +6,13 @@
 
         public abstract string Description { get; }
 
-        public abstract string Symbol { get; }
+        public abstract string DefaultSymbol { get; }
 
         public decimal Value { get; protected set; }
 
         public override string ToString()
         {
-            return string.Format("{0}{1}", Value, Symbol);
+            return string.Format("{0}{1}", Value, DefaultSymbol);
         }
     }
 }

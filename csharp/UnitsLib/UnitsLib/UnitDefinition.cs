@@ -6,7 +6,7 @@
 
         public string Description { get; }
 
-        public string Symbol { get; }
+        public string DefaultSymbol { get; }
 
         public TValue Value { get; }
     }
