@@ -17,6 +17,19 @@ namespace UnitsLib.Tests.Metric.Length
             Assert.That(sut.ToString(), Is.EqualTo(display));
         }
 
+        [TestCase(1623000, 1.623, "1.623m")]
+        [TestCase(532987, 0.532987, "0.532987m")]
+        [TestCase(-1444000, -1.444, "-1.444m")]
+        [TestCase(3400000, 3.4, "3.4m")]
+        [TestCase(2, 0.000_002, "0.000002m")]
+        public void TestFromMicrons(double microns, double value, string display)
+        {
+            var sut = Metre.FromMicrons((decimal)microns);
+
+            Assert.That(sut.Value, Is.EqualTo((decimal)value));
+            Assert.That(sut.ToString(), Is.EqualTo(display));
+        }
+
         [TestCase(1623, 1.623, "1.623m")]
         [TestCase(532, 0.532, "0.532m")]
         [TestCase(-1444, -1.444, "-1.444m")]
